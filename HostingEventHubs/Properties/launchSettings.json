@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "GenericHostDevelopment": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "Telemetry__key": "my-fake-key",
+        "HOSTNAME": "localhost"
+      }
+    }
+  }
+}
