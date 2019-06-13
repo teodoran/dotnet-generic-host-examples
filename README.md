@@ -14,8 +14,35 @@ It might be tempting to write such services as simple console applications, and 
 Kubernetes can do a lot of heavy lifting when it comes to [restarting failing programs](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) and keeping long [lived programs running](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/), but it still really want you to [handle termination of your program](https://kubernetes.io/docs/concepts/workloads/pods/pod/#termination-of-pods) in a clean and efficient manner.
 
 ### You won me over! How do I go about navigating this repository?
-TODO: Get the content going
+_TODO: Currently all you have is the talk outline._
 
+Talk outline
+------------
+__SimpleConsoleService__
+* Run & CTRL + C. Wait, what about Stop and Dispose?
+* SIGTERM. Whoops, now it's broken :-/
+
+__SimpleHostedService__
+* Run & CTRL + C. Works!
+* SIGTERM. Works!
+
+__HandlingExceptions__
+* You have to handle exceptions yourself
+* A quick look at configuration
+
+__AspNetInspiredStartup__
+* Would you like to have something like Startup from ASP.NET Core?
+* Hafslund.Configuration and Hafslund.Telemetry works!
+* Host.Generic
+
+__HostingEventHubs__
+* EventHubProcessor needs to be unregistered properly
+* Also, a lot of factory stuff to inject everything
+
+__More info__
+* Check out [.NET Generic Host](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/generic-host)
+* Check out [Fundamentals: hosted services](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services)
+* Not covered: Starting and stopping services. Background services to ASP.NET Core projects.
 
 Closing notes
 -------------
