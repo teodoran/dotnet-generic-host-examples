@@ -1,0 +1,11 @@
+# Build results
+**/bin
+**/obj
+**/out
+
+# Local configuration (possibly containing secrets)
+*.Development.json
+
+# User-specific files
+**/.vscode
+**/.idea
